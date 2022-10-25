@@ -126,7 +126,7 @@ function UserEntry() {
 			/>
 			<StateField
 				id='state'
-				className='field stateField'
+				className='stateField'
 				required
 				states={data.states}
 				state={state}
