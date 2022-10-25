@@ -65,18 +65,20 @@ function UserEntry() {
 		fetch(
 			'https://frontend-take-home.fetchrewards.com/form',
 			requestOptions
-		).then((response) => {
-			if (response.status !== 201) {
-				setIsErrorWithUserCreation(true);
-			} else {
-				response.json().then((createdUser) => {
-					setCreatedUser(createdUser);
-					setIsErrorWithUserCreation(false);
-					resetForm();
-				});
-			}
-		});
+		).then((response) => respondToAttemptedUserCreation(response));
 	};
+
+	function respondToAttemptedUserCreation(response: Response) {
+		if (response.status !== 201) {
+			setIsErrorWithUserCreation(true);
+		} else {
+			response.json().then((createdUser) => {
+				setCreatedUser(createdUser);
+				setIsErrorWithUserCreation(false);
+				resetForm();
+			});
+		}
+	}
 
 	function resetForm(): void {
 		setName('');

@@ -31,6 +31,8 @@ export function IsEmailValid(email: string): boolean {
 	if (email === '') {
 		return true;
 	}
+
+	// This is attempting to match the standard email format of username@domain.com
 	return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
