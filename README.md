@@ -1,3 +1,7 @@
+# Note from Developer:
+You'll need to run this command in the project directory before you'll be able to run the app with `npm start`
+### `npm install react-scripts`
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -5,10 +9,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Available Scripts
 
 In the project directory, you can run:
-
-### `npm install react-scripts`
-
-Followed by:
 
 ### `npm start`
 
